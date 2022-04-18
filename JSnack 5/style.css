@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: cadetblue;
+}
+
+.debug{
+  border: 1px solid black;
+}
+
+.box-output{
+  width: 70%;
+  margin: 50px auto;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(207, 150, 230);
+}
+
+.button-start{
+  display: block;
+  text-transform: uppercase;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgb(255, 166, 0);
+  border-color: rgb(255, 166, 0);
+  color: white;
+}
+
+h1{
+  margin-bottom: 30px;
+}
+
