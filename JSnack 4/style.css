@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: cadetblue;
+}
+
+.bg-yes{
+  background-image: url(bg-img.png);
+  background-size: cover;
+}
+
+.bg-no{
+  background-image: url(bg-img-no.png);
+  background-size: cover;
+}
+
+.debug{
+  border: 1px solid black;
+}
+
+.box-output{
+  width: 70%;
+  margin: 50px auto;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(179, 107, 0);
+}
+
+.button{
+  display: block;
+  text-transform: uppercase;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgb(15, 177, 177);
+  border-color: rgb(15, 177, 177);
+}
+
+.again{
+  display: none;
+}
+
+h1{
+  margin-bottom: 30px;
+}
+
+#nome{
+  padding: 10px;
+}
+
+label{
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.show{
+  display: block;
+}
