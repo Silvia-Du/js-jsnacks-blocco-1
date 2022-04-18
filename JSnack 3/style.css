@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(img-number.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.box-output{
+  width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(250, 235, 215, 0.705);
+}
+
+h1{
+  margin-top: 30px;
+}
+
+h2, h3{
+  margin-bottom: 30px;
+}
+
+.button-for,
+.button-while{
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgb(15, 177, 177);
+  border-color: rgb(15, 177, 177);
+}
+
+.button-for:hover,
+.button-while:hover{
+  opacity: 0.8;
+  transition: 0.3s;
+}
