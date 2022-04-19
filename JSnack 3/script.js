@@ -20,10 +20,23 @@ const buttonWhile = document.querySelector('.button-while');
 
 //FOR 
 buttonFor.addEventListener('click', function(){
+
   alert('ti chiederò di inserire 5 numeri');
   for(let i=0; i< numQuestion; i++){
-    userNumber = parseInt(prompt('inserisci un numero casuale'));
-  
+
+    userNumber = parseInt(prompt(`inserisci il ${i + 1}° numero`).trim());
+    let checkNumber = false;
+
+    while(!checkNumber){
+
+      
+      if(isNaN(userNumber)){
+        alert('inserisci un numero non lettere!');
+        userNumber = parseInt(prompt(`inserisci il ${i + 1}° numero`).trim());
+      }else{
+        checkNumber = true;
+      }
+    }
   
     if(insertNumList.length< numQuestion){
       insertNumList.push(userNumber);
@@ -47,9 +60,22 @@ buttonWhile.addEventListener('click', function(){
   alert('ti chiederò di inserire 5 numeri');
 
   while(numQuestion > i){
-    userNumber = parseInt(prompt('inserisci un numero casuale'));
-    numberSumW = numberSumW +userNumber;
-    console.log('la somma dei numeri inseriti è:', numberSum);
+
+    let checkNumber = false;
+    userNumber = parseInt(prompt(`inserisci il ${i + 1}° numero`).trim());
+
+    while(!checkNumber){
+
+      if(isNaN(userNumber)){
+        alert('inserisci un numero non lettere!');
+        userNumber = parseInt(prompt(`inserisci il ${i + 1}° numero`).trim());
+        
+      }else{
+        checkNumber = true;
+      }
+    }
+
+    numberSumW += userNumber;
     i++
   }
 
