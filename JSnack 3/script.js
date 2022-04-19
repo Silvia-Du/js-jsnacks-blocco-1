@@ -43,9 +43,10 @@ buttonFor.addEventListener('click', function(){
 buttonWhile.addEventListener('click', function(){
 
   let i = 0;
+  
+  alert('ti chiederò di inserire 5 numeri');
 
   while(numQuestion > i){
-    alert('ti chiederò di inserire 5 numeri');
     userNumber = parseInt(prompt('inserisci un numero casuale'));
     numberSumW = numberSumW +userNumber;
     console.log('la somma dei numeri inseriti è:', numberSum);

@@ -9,6 +9,7 @@ let growingNumber = 0;
 let checknumber = false;
 const numberList = document.querySelector('.number-list');
 
+
 while(!checknumber){
   //verifica che sia un numero
   userNumber = parseInt(prompt('inserisci il numero su cui vuoi calcolare il cubo'));
