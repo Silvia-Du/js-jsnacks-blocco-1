@@ -22,12 +22,16 @@ buttonStart.addEventListener('click',function(){
 
   while(!checkLongWord){
   
-    firstWord = prompt('inserisci la prima parola che ti viene in mente');
+    firstWord = prompt('inserisci la prima parola che ti viene in mente').trim();
+
+    const wordCounter = firstWord.split(' ');
 
     if(!isNaN(firstWord)){
-      alert('inserisci lettere non numeri')
+      alert('inserisci lettere non numeri');
     }else if(firstWord.length< 2){
-      alert('la parole deve avere almeno due caratteri!')
+      alert('la parole deve avere almeno due caratteri!');
+    }else if(wordCounter.length != 1){
+      alert('inserisci solo una parola')
     }else{
       checkLongWord = true;
     }  
@@ -35,13 +39,17 @@ buttonStart.addEventListener('click',function(){
 
   while (!checkLongWord2){
   
-    secondWord = prompt('inserisci un\'altra parola') ;
-        
+    secondWord = prompt('inserisci un\'altra parola').trim();
+
+    const wordCounter = secondWord.split(' ');
+    
     if(!isNaN(secondWord)){
       alert('inserisci lettere non numeri');
     }else if(secondWord.length< 2){
       alert('la parole deve avere almeno due caratteri!')
-    }else{
+    }else if(wordCounter.length != 1){
+      alert('inserisci solo una parola')
+    } else{
       checkLongWord2 = true;
     }
   } 
@@ -50,16 +58,15 @@ buttonStart.addEventListener('click',function(){
   outputSpace.classList.add('block');
 
   if(firstWord.length > secondWord.length){
-    console.log( 'le parole in ordine di lunghezza sono:',secondWord,firstWord);
     output = `le parole in ordine di lunghezza sono:${secondWord},${firstWord}`;
+
   }else if(firstWord.length < secondWord.length){
-    console.log('le parole in ordine di lunghezza sono:',firstWord, secondWord);
     output = `le parole in ordine di lunghezza sono: ${firstWord}, ${secondWord}`;
+
   }else{
-    console.log('le due parole sono uguali');
     output = `le due parole sono uguali`;
   }
-  console.log(firstWord);
+  
   document.getElementById('output-word').innerHTML = output;
   
 })
