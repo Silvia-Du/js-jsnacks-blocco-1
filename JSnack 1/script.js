@@ -9,53 +9,42 @@ const outputSection = document.querySelector('.section-output')
 
 let firstNumber;
 let secondNumber;
-let higestNumber;
-
-let wantNumber = false;
-let wantNumber2 = false;
-
+let output;
 
 btnStart.addEventListener('click', function(){
 
-  while(!wantNumber){
-    firstNumber = parseInt(prompt('inserisci il primo numero'));
+  while(isNaN(firstNumber)){
+    firstNumber = parseInt(prompt('inserisci il primo numero').trim());
     document.querySelector('.first-n').innerHTML = firstNumber;
 
     if(isNaN(firstNumber)){
       alert('inserisci un numero, non lettere!');
-    }else{
-      wantNumber = true;
     }
-
   }
 
-  while(!wantNumber2){
+  while(isNaN(secondNumber)){
     
-    secondNumber = parseInt(prompt('inserisci il secondo numero'));
+    secondNumber = parseInt(prompt('inserisci il secondo numero').trim());
     document.querySelector('.second-n').innerHTML = secondNumber;
 
     if(isNaN(secondNumber)){
       alert('inserisci un numero, non lettere!');
-    }else{
-      wantNumber2 = true;
     }
-
   }
 
   if(firstNumber> secondNumber){
-    higestNumber = firstNumber;
+    output = firstNumber;
     
   }else if(firstNumber< secondNumber){
-    higestNumber = secondNumber;
+    output = secondNumber;
     
-
   }else{
-    higestNumber = 'i numeri sono uguali nessuno dei due è maggiore';   
+    output = 'i numeri sono uguali nessuno dei due è maggiore';   
   }
 
   outputSection.classList.add('block')
 
-  document.getElementById('output-result').innerHTML = higestNumber + '!';
+  document.getElementById('output-result').innerHTML = output + '!';
   
 });
 
